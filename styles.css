@@ -376,12 +376,6 @@ footer {
 
 footer p { margin: 4px 0; }
 
-.visitor-counter {
-  margin-top: 16px;
-  display: flex;
-  justify-content: center;
-}
-
 @media (max-width: 860px) {
   .nav {
     align-items: flex-start;
