@@ -262,6 +262,45 @@ h3 {
   border: 0;
 }
 
+.map-block {
+  margin-top: 28px;
+}
+
+.map-block h3 {
+  margin-bottom: 12px;
+}
+
+.map-block iframe {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.book-col {
+  grid-template-columns: 200px 1fr 1fr;
+  align-items: start;
+}
+
+.book-cover img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px rgba(29, 37, 40, 0.12);
+}
+
+@media (max-width: 860px) {
+  .book-col {
+    grid-template-columns: 1fr;
+  }
+
+  .book-cover {
+    max-width: 220px;
+  }
+}
+
 .mini-gallery,
 .gallery {
   display: grid;
