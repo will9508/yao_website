@@ -74,13 +74,11 @@ img {
 }
 
 .hero {
-  min-height: 24vh;
+  min-height: 16vh;
   display: grid;
   align-items: center;
-  padding: 32px max(24px, calc((100vw - 1180px) / 2));
-  background:
-    linear-gradient(90deg, rgba(13, 20, 22, 0.78), rgba(13, 20, 22, 0.26)),
-    url("https://lh3.googleusercontent.com/sitesv/AG8ngQUL-pjfgpAowr5QsxiW9EdwRyUzWShUbYLfyPEQSZuBFTRvuQbIDp1YYHM57wMbgNq-hFVL91TDZSODk3YC2QUfPmVBo9McYNp4VSTH7S8CprBkch74ihisCRG9XxEmk7duyjVYBWf3W-4eQmeW2HIALknY-ezxTy13PDLSnxiuSZvKjsbCwt2sjxa3=w16383") center / cover;
+  padding: 24px max(24px, calc((100vw - 1180px) / 2));
+  background: linear-gradient(120deg, var(--accent-2), var(--accent));
   color: white;
 }
 
@@ -102,8 +100,8 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
 h1 {
   margin: 0;
   max-width: 860px;
-  font-size: clamp(44px, 9vw, 92px);
-  line-height: 0.96;
+  font-size: clamp(28px, 4.5vw, 44px);
+  line-height: 1.15;
   letter-spacing: 0;
 }
 
@@ -391,9 +389,9 @@ footer p { margin: 4px 0; }
   }
 
   .hero {
-    min-height: 28vh;
-    padding-top: 28px;
-    padding-bottom: 28px;
+    min-height: 18vh;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   .content-grid,
