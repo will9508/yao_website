@@ -178,6 +178,14 @@ h3 {
   background: white;
 }
 
+.paper-year {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
 .paper-list p,
 .publication-list,
 .two-col p,
