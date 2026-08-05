@@ -168,6 +168,21 @@ h3 {
   overflow: hidden;
   background: white;
   text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.tile:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(29, 37, 40, 0.14);
+  border-color: var(--accent-2);
+}
+
+.tile img {
+  transition: transform 0.3s ease;
+}
+
+.tile:hover img {
+  transform: scale(1.05);
 }
 
 .tile span {
