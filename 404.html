@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — Dr Yao Wei</title>
+  <link rel="icon" type="image/jpeg" href="images/me.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .void {
+      min-height: 60vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 48px 16px;
+    }
+    .void h1 {
+      font-size: clamp(48px, 10vw, 120px);
+      margin: 0;
+      letter-spacing: 0;
+    }
+    .void .state {
+      font-family: "Courier New", monospace;
+      font-size: 18px;
+      color: var(--muted);
+      margin: 10px 0 28px;
+      min-height: 1.6em;
+    }
+    .void .collapse-btn {
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+    .void .result {
+      margin-top: 20px;
+      font-size: 15px;
+      color: var(--muted);
+      min-height: 1.4em;
+    }
+    .void .home-link {
+      display: inline-block;
+      margin-top: 28px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">Dr Yao Wei</a>
+      <div class="links">
+        <a href="machine.html">Engineering</a>
+        <a href="physics.html">Physics</a>
+        <a href="travel.html">Far and Wide</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="void">
+      <div>
+        <h1>|404⟩</h1>
+        <p class="state" id="state">This page is in a superposition of existing and not existing.</p>
+        <button class="button collapse-btn" id="collapse">Measure the page</button>
+        <p class="result" id="result"></p>
+        <p class="home-link"><a href="index.html">← back to somewhere that definitely exists</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+
+  <script>
+    (function () {
+      var outcomes = [
+        "Collapsed to: page not found. Sorry — wrong branch of the wavefunction.",
+        "Collapsed to: 404, still not found. Measurement doesn't always help.",
+        "Collapsed to: this page never existed in any eigenstate.",
+        "Collapsed to: not found (with 100% probability, unfortunately).",
+        "Collapsed to: you found the null result. That's still a result.",
+        "Collapsed to: the URL decayed before you got here."
+      ];
+      var btn = document.getElementById('collapse');
+      var result = document.getElementById('result');
+      var state = document.getElementById('state');
+      btn.addEventListener('click', function () {
+        var pick = outcomes[Math.floor(Math.random() * outcomes.length)];
+        result.textContent = pick;
+        state.textContent = "Wavefunction collapsed.";
+        btn.disabled = true;
+      });
+    })();
+  </script>
+</body>
+</html>
