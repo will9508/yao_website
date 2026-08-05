@@ -73,24 +73,6 @@ img {
   text-decoration: none;
 }
 
-.lang-toggle {
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--ink);
-  background: var(--soft);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 5px 12px;
-  line-height: 1;
-}
-
-.lang-toggle:hover {
-  border-color: var(--accent-2);
-  color: var(--accent-2);
-}
-
 .hero {
   min-height: 20vh;
   display: grid;
