@@ -241,6 +241,38 @@ h3 {
   line-height: 1.35;
 }
 
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.badge-gold {
+  background: #fdf1d8;
+  color: #8a5a00;
+  border: 1px solid #f0d38a;
+}
+
+.badge-top {
+  background: #e6f3f4;
+  color: var(--accent-2);
+  border: 1px solid #bfe0e2;
+}
+
+.badge-press {
+  background: #fbe9e4;
+  color: var(--accent);
+  border: 1px solid #f0c6b8;
+}
+
 .pub-title a {
   color: var(--ink);
   text-decoration: none;
