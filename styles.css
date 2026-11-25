@@ -476,24 +476,7 @@ footer p { margin: 4px 0; }
   box-shadow: 0 8px 24px rgba(31, 107, 117, 0.08);
 }
 
-.map-controls { display: flex; justify-content: flex-end; gap: 6px; margin-bottom: 8px; }
-.map-controls button {
-  min-width: 36px;
-  min-height: 36px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: white;
-  color: var(--ink);
-  font: inherit;
-  cursor: pointer;
-}
-.map-controls button:disabled { opacity: .45; cursor: default; }
-.map-viewport { aspect-ratio: 1080 / 426; overflow: hidden; border-radius: 14px; }
-.map-viewport.is-zoomed { overflow: auto; cursor: grab; }
-
-.cartoon-map { display: block; width: 100%; height: auto; max-width: none; }
-.cartoon-map .dot { r: calc(3.4px * var(--map-inverse-zoom, 1)); }
-.cartoon-map .glow { r: calc(15px * var(--map-inverse-zoom, 1)); }
+.cartoon-map { display: block; width: 100%; height: auto; }
 
 .cartoon-map .grid line { stroke: #fff; stroke-opacity: .55; stroke-width: 1; stroke-dasharray: 4 6; }
 .cartoon-map .land-shadow path { fill: #c9b98f; opacity: .55; }
@@ -503,7 +486,7 @@ footer p { margin: 4px 0; }
 
 .cartoon-map .pin { cursor: pointer; outline: none; }
 .cartoon-map .leader { stroke: #e0a21b; stroke-width: 1.6; stroke-dasharray: 2 3; }
-.cartoon-map .dot { fill: #f2a900; stroke: #fff; stroke-width: calc(1.6px * var(--map-inverse-zoom, 1)); }
+.cartoon-map .dot { fill: #f2a900; stroke: #fff; stroke-width: 1.6; }
 .cartoon-map .ring { fill: #fff; stroke: #f2a900; stroke-width: 2.5; }
 .cartoon-map .label { font: 700 11px Arial, sans-serif; fill: var(--ink); paint-order: stroke; stroke: #fff; stroke-width: 3px; stroke-linejoin: round; }
 .cartoon-map .bubble { transition: transform .2s ease; transform-box: fill-box; }
