@@ -38,7 +38,7 @@
       <p class="eyebrow">Places we have been together</p>
       <h3>Lit up so far</h3>
       <div class="map-card">
-        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with ten places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen, Cambridge, Barcelona and Honolulu. Select a place to see our photo.">
+        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with eleven places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen, Cambridge, Barcelona, Honolulu and Antalya. Select a place to see our photo.">
           <defs>
             <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stop-color="#d4ebf0"/>
@@ -222,6 +222,16 @@
           <text class="label" y="39" text-anchor="middle">Honolulu</text>
         </g>
       </g>
+      <g class="pin" style="--i:10" data-key="antalya" tabindex="0" role="button" aria-label="Antalya, Türkiye — open photo">
+        <circle class="glow" cx="632.1" cy="141.3" r="15" fill="url(#glow)"/>
+        <line class="leader" x1="632.1" y1="141.3" x2="679" y2="174"/>
+        <circle class="dot" cx="632.1" cy="141.3" r="3.4"/>
+        <g class="bubble" transform="translate(679 174)">
+          <circle class="ring" r="28"/>
+          <image href="images/us/antalya-thumb.jpg" x="-25" y="-25" width="50" height="50" clip-path="url(#clip)" preserveAspectRatio="xMidYMid slice"/>
+          <text class="label" y="39" text-anchor="middle">Antalya</text>
+        </g>
+      </g>
         </svg>
       </div>
       <ul class="place-strip">
@@ -265,6 +275,10 @@
         <img src="images/us/honolulu-thumb.jpg" alt="" width="56" height="56" loading="lazy">
         <span><strong>Honolulu, USA</strong><em>美国 檀香山</em></span>
       </button></li>
+      <li><button type="button" class="chip" data-key="antalya">
+        <img src="images/us/antalya-thumb.jpg" alt="" width="56" height="56" loading="lazy">
+        <span><strong>Antalya, Türkiye</strong><em>土耳其 安塔利亚</em></span>
+      </button></li>
       </ul>
     </section>
 
@@ -290,7 +304,8 @@
     { key: "bergen", en: "Bergen, Norway", zh: "挪威 卑尔根" },
     { key: "cambridge", en: "Cambridge, UK", zh: "英国 剑桥" },
     { key: "barcelona", en: "Barcelona, Spain", zh: "西班牙 巴塞罗那" },
-    { key: "honolulu", en: "Honolulu, USA", zh: "美国 檀香山" }
+    { key: "honolulu", en: "Honolulu, USA", zh: "美国 檀香山" },
+    { key: "antalya", en: "Antalya, Türkiye", zh: "土耳其 安塔利亚" }
         ];
         var box = document.getElementById('lightbox');
         var img = document.getElementById('lb-img');
