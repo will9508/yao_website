@@ -38,7 +38,7 @@
       <p class="eyebrow">Places we have been together</p>
       <h3>Lit up so far</h3>
       <div class="map-card">
-        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with eight places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen and Cambridge. Select a place to see our photo.">
+        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with nine places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen, Cambridge and Barcelona. Select a place to see our photo.">
           <defs>
             <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stop-color="#d4ebf0"/>
@@ -202,6 +202,16 @@
           <text class="label" y="39" text-anchor="middle">Cambridge</text>
         </g>
       </g>
+      <g class="pin" style="--i:8" data-key="barcelona" tabindex="0" role="button" aria-label="Barcelona, Spain — open photo">
+        <circle class="glow" cx="546.5" cy="127.8" r="15" fill="url(#glow)"/>
+        <line class="leader" x1="546.5" y1="127.8" x2="526" y2="190"/>
+        <circle class="dot" cx="546.5" cy="127.8" r="3.4"/>
+        <g class="bubble" transform="translate(526 190)">
+          <circle class="ring" r="28"/>
+          <image href="images/us/barcelona-thumb.jpg" x="-25" y="-25" width="50" height="50" clip-path="url(#clip)" preserveAspectRatio="xMidYMid slice"/>
+          <text class="label" y="39" text-anchor="middle">Barcelona</text>
+        </g>
+      </g>
         </svg>
       </div>
       <ul class="place-strip">
@@ -237,6 +247,10 @@
         <img src="images/us/cambridge-thumb.jpg" alt="" width="56" height="56" loading="lazy">
         <span><strong>Cambridge, UK</strong><em>英国 剑桥</em></span>
       </button></li>
+      <li><button type="button" class="chip" data-key="barcelona">
+        <img src="images/us/barcelona-thumb.jpg" alt="" width="56" height="56" loading="lazy">
+        <span><strong>Barcelona, Spain</strong><em>西班牙 巴塞罗那</em></span>
+      </button></li>
       </ul>
     </section>
 
@@ -260,7 +274,8 @@
     { key: "fuji", en: "Mount Fuji, Japan", zh: "日本 富士山" },
     { key: "orlando", en: "Orlando, USA", zh: "美国 奥兰多" },
     { key: "bergen", en: "Bergen, Norway", zh: "挪威 卑尔根" },
-    { key: "cambridge", en: "Cambridge, UK", zh: "英国 剑桥" }
+    { key: "cambridge", en: "Cambridge, UK", zh: "英国 剑桥" },
+    { key: "barcelona", en: "Barcelona, Spain", zh: "西班牙 巴塞罗那" }
         ];
         var box = document.getElementById('lightbox');
         var img = document.getElementById('lb-img');
