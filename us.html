@@ -38,6 +38,12 @@
       <p class="eyebrow">Places we have been together</p>
       <h3>Lit up so far</h3>
       <div class="map-card">
+        <div class="map-controls" role="group" aria-label="Map zoom">
+          <button type="button" id="map-zoom-out" aria-label="Zoom out" aria-controls="map-viewport" disabled>−</button>
+          <button type="button" id="map-zoom-in" aria-label="Zoom in" aria-controls="map-viewport">+</button>
+          <button type="button" id="map-reset" aria-controls="map-viewport" disabled>Reset map</button>
+        </div>
+        <div class="map-viewport" id="map-viewport" tabindex="0" role="region" aria-label="Travel map. When zoomed in, drag, swipe, or use arrow keys to pan.">
         <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with eight places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen and Cambridge. Select a place to see our photo.">
           <defs>
             <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
@@ -203,6 +209,7 @@
         </g>
       </g>
         </svg>
+        </div>
       </div>
       <ul class="place-strip">
       <li><button type="button" class="chip" data-key="london">
@@ -252,6 +259,50 @@
 
     <script>
       (function () {
+        var viewport = document.getElementById('map-viewport');
+        var map = viewport.querySelector('.cartoon-map');
+        var zoomIn = document.getElementById('map-zoom-in');
+        var zoomOut = document.getElementById('map-zoom-out');
+        var reset = document.getElementById('map-reset');
+        var zoom = 1;
+        var maxZoom = 8;
+        var drag = null;
+
+        function setZoom(next) {
+          var anchorX = viewport.clientWidth / 2;
+          var anchorY = viewport.clientHeight / 4;
+          var ratio = next / zoom;
+          var left = (viewport.scrollLeft + anchorX) * ratio - anchorX;
+          var top = (viewport.scrollTop + anchorY) * ratio - anchorY;
+
+          zoom = next;
+          map.style.width = (zoom * 100) + '%';
+          map.style.setProperty('--map-inverse-zoom', 1 / zoom);
+          viewport.classList.toggle('is-zoomed', zoom > 1);
+          viewport.scrollTo(zoom === 1 ? 0 : left, zoom === 1 ? 0 : top);
+          zoomOut.disabled = reset.disabled = zoom === 1;
+          zoomIn.disabled = zoom === maxZoom;
+        }
+
+        zoomIn.addEventListener('click', function () { setZoom(Math.min(maxZoom, zoom * 2)); });
+        zoomOut.addEventListener('click', function () { setZoom(Math.max(1, zoom / 2)); });
+        reset.addEventListener('click', function () { setZoom(1); });
+
+        viewport.addEventListener('pointerdown', function (event) {
+          if (zoom === 1 || event.pointerType !== 'mouse' || event.button !== 0 ||
+              !map.contains(event.target) || event.target.closest('.pin')) return;
+          event.preventDefault();
+          drag = {
+            x: event.clientX + viewport.scrollLeft,
+            y: event.clientY + viewport.scrollTop
+          };
+          viewport.setPointerCapture(event.pointerId);
+        });
+        viewport.addEventListener('pointermove', function (event) {
+          if (drag) viewport.scrollTo(drag.x - event.clientX, drag.y - event.clientY);
+        });
+        viewport.addEventListener('lostpointercapture', function () { drag = null; });
+
         var places = [
     { key: "london", en: "London, UK", zh: "英国 伦敦" },
     { key: "hallstatt", en: "Hallstatt, Austria", zh: "奥地利 哈尔施塔特" },
