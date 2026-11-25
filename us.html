@@ -38,7 +38,7 @@
       <p class="eyebrow">Places we have been together</p>
       <h3>Lit up so far</h3>
       <div class="map-card">
-        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with six places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji and Orlando. Select a place to see our photo.">
+        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with seven places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando and Bergen. Select a place to see our photo.">
           <defs>
             <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stop-color="#d4ebf0"/>
@@ -182,6 +182,16 @@
           <text class="label" y="39" text-anchor="middle">Orlando</text>
         </g>
       </g>
+      <g class="pin" style="--i:6" data-key="bergen" tabindex="0" role="button" aria-label="Bergen, Norway — open photo">
+        <circle class="glow" cx="556.0" cy="25.8" r="15" fill="url(#glow)"/>
+        <line class="leader" x1="556.0" y1="25.8" x2="680" y2="39"/>
+        <circle class="dot" cx="556.0" cy="25.8" r="3.4"/>
+        <g class="bubble" transform="translate(680 39)">
+          <circle class="ring" r="28"/>
+          <image href="images/us/bergen-thumb.jpg" x="-25" y="-25" width="50" height="50" clip-path="url(#clip)" preserveAspectRatio="xMidYMid slice"/>
+          <text class="label" y="39" text-anchor="middle">Bergen</text>
+        </g>
+      </g>
         </svg>
       </div>
       <ul class="place-strip">
@@ -209,6 +219,10 @@
         <img src="images/us/orlando-thumb.jpg" alt="" width="56" height="56" loading="lazy">
         <span><strong>Orlando, USA</strong><em>美国 奥兰多</em></span>
       </button></li>
+      <li><button type="button" class="chip" data-key="bergen">
+        <img src="images/us/bergen-thumb.jpg" alt="" width="56" height="56" loading="lazy">
+        <span><strong>Bergen, Norway</strong><em>挪威 卑尔根</em></span>
+      </button></li>
       </ul>
     </section>
 
@@ -230,7 +244,8 @@
     { key: "matterhorn", en: "Zermatt and the Matterhorn, Switzerland", zh: "瑞士 马特洪峰" },
     { key: "tenerife", en: "Tenerife, Spain", zh: "西班牙 特内里费" },
     { key: "fuji", en: "Mount Fuji, Japan", zh: "日本 富士山" },
-    { key: "orlando", en: "Orlando, USA", zh: "美国 奥兰多" }
+    { key: "orlando", en: "Orlando, USA", zh: "美国 奥兰多" },
+    { key: "bergen", en: "Bergen, Norway", zh: "挪威 卑尔根" }
         ];
         var box = document.getElementById('lightbox');
         var img = document.getElementById('lb-img');
