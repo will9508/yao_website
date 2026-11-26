@@ -38,7 +38,7 @@
       <p class="eyebrow">Places we have been together</p>
       <h3>Lit up so far</h3>
       <div class="map-card">
-        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with seventeen places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen, Cambridge, Barcelona, Honolulu, Antalya, Cairo, Mauna Kea, San Francisco, Las Vegas, Los Angeles and Dublin. Select a place to see our photo.">
+        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with eighteen places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen, Cambridge, Barcelona, Honolulu, Antalya, Cairo, Mauna Kea, San Francisco, Las Vegas, Los Angeles, Dublin and Galway. Select a place to see our photo.">
           <defs>
             <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stop-color="#d4ebf0"/>
@@ -292,6 +292,16 @@
           <text class="label" y="39" text-anchor="middle">Dublin</text>
         </g>
       </g>
+      <g class="pin" style="--i:17" data-key="galway" tabindex="0" role="button" aria-label="Galway, Ireland — open photo">
+        <circle class="glow" cx="512.8" cy="92.2" r="15" fill="url(#glow)"/>
+        <line class="leader" x1="512.8" y1="92.2" x2="400" y2="153"/>
+        <circle class="dot" cx="512.8" cy="92.2" r="3.4"/>
+        <g class="bubble" transform="translate(400 153)">
+          <circle class="ring" r="28"/>
+          <image href="images/us/galway-thumb.jpg" x="-25" y="-25" width="50" height="50" clip-path="url(#clip)" preserveAspectRatio="xMidYMid slice"/>
+          <text class="label" y="39" text-anchor="middle">Galway</text>
+        </g>
+      </g>
         </svg>
       </div>
       <ul class="place-strip">
@@ -363,6 +373,10 @@
         <img src="images/us/dublin-thumb.jpg" alt="" width="56" height="56" loading="lazy">
         <span><strong>Dublin, Ireland</strong><em>爱尔兰 都柏林</em></span>
       </button></li>
+      <li><button type="button" class="chip" data-key="galway">
+        <img src="images/us/galway-thumb.jpg" alt="" width="56" height="56" loading="lazy">
+        <span><strong>Galway, Ireland</strong><em>爱尔兰 戈尔韦</em></span>
+      </button></li>
       </ul>
     </section>
 
@@ -395,7 +409,8 @@
     { key: "san-francisco", en: "San Francisco, USA", zh: "美国 旧金山" },
     { key: "las-vegas", en: "Las Vegas, USA", zh: "美国 拉斯维加斯" },
     { key: "los-angeles", en: "Los Angeles, USA", zh: "美国 洛杉矶" },
-    { key: "dublin", en: "Dublin, Ireland", zh: "爱尔兰 都柏林" }
+    { key: "dublin", en: "Dublin, Ireland", zh: "爱尔兰 都柏林" },
+    { key: "galway", en: "Galway, Ireland", zh: "爱尔兰 戈尔韦" }
         ];
         var box = document.getElementById('lightbox');
         var img = document.getElementById('lb-img');
