@@ -38,7 +38,7 @@
       <p class="eyebrow">Places we have been together</p>
       <h3>Lit up so far</h3>
       <div class="map-card">
-        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with eighteen places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen, Cambridge, Barcelona, Honolulu, Antalya, Cairo, Mauna Kea, San Francisco, Las Vegas, Los Angeles, Dublin and Galway. Select a place to see our photo.">
+        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with nineteen places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen, Cambridge, Barcelona, Honolulu, Antalya, Cairo, Mauna Kea, San Francisco, Las Vegas, Los Angeles, Dublin, Galway and Mürren. Select a place to see our photo.">
           <defs>
             <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stop-color="#d4ebf0"/>
@@ -302,6 +302,16 @@
           <text class="label" y="39" text-anchor="middle">Galway</text>
         </g>
       </g>
+      <g class="pin" style="--i:18" data-key="murren" tabindex="0" role="button" aria-label="Mürren, Switzerland — open photo">
+        <circle class="glow" cx="563.7" cy="112.3" r="15" fill="url(#glow)"/>
+        <line class="leader" x1="563.7" y1="112.3" x2="565" y2="39"/>
+        <circle class="dot" cx="563.7" cy="112.3" r="3.4"/>
+        <g class="bubble" transform="translate(565 39)">
+          <circle class="ring" r="28"/>
+          <image href="images/us/murren-thumb.jpg" x="-25" y="-25" width="50" height="50" clip-path="url(#clip)" preserveAspectRatio="xMidYMid slice"/>
+          <text class="label" y="39" text-anchor="middle">Mürren</text>
+        </g>
+      </g>
         </svg>
       </div>
       <ul class="place-strip">
@@ -377,6 +387,10 @@
         <img src="images/us/galway-thumb.jpg" alt="" width="56" height="56" loading="lazy">
         <span><strong>Galway, Ireland</strong><em>爱尔兰 戈尔韦</em></span>
       </button></li>
+      <li><button type="button" class="chip" data-key="murren">
+        <img src="images/us/murren-thumb.jpg" alt="" width="56" height="56" loading="lazy">
+        <span><strong>Mürren, Switzerland</strong><em>瑞士 米伦</em></span>
+      </button></li>
       </ul>
     </section>
 
@@ -410,7 +424,8 @@
     { key: "las-vegas", en: "Las Vegas, USA", zh: "美国 拉斯维加斯" },
     { key: "los-angeles", en: "Los Angeles, USA", zh: "美国 洛杉矶" },
     { key: "dublin", en: "Dublin, Ireland", zh: "爱尔兰 都柏林" },
-    { key: "galway", en: "Galway, Ireland", zh: "爱尔兰 戈尔韦" }
+    { key: "galway", en: "Galway, Ireland", zh: "爱尔兰 戈尔韦" },
+    { key: "murren", en: "Mürren, Switzerland", zh: "瑞士 米伦" }
         ];
         var box = document.getElementById('lightbox');
         var img = document.getElementById('lb-img');
