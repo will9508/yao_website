@@ -38,7 +38,7 @@
       <p class="eyebrow">Places we have been together</p>
       <h3>Lit up so far</h3>
       <div class="map-card">
-        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with thirteen places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen, Cambridge, Barcelona, Honolulu, Antalya, Cairo and Mauna Kea. Select a place to see our photo.">
+        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with fourteen places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen, Cambridge, Barcelona, Honolulu, Antalya, Cairo, Mauna Kea and San Francisco. Select a place to see our photo.">
           <defs>
             <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stop-color="#d4ebf0"/>
@@ -252,6 +252,16 @@
           <text class="label" y="39" text-anchor="middle">Mauna Kea</text>
         </g>
       </g>
+      <g class="pin" style="--i:13" data-key="san-francisco" tabindex="0" role="button" aria-label="San Francisco, USA — open photo">
+        <circle class="glow" cx="172.6" cy="138.5" r="15" fill="url(#glow)"/>
+        <line class="leader" x1="172.6" y1="138.5" x2="132" y2="98"/>
+        <circle class="dot" cx="172.6" cy="138.5" r="3.4"/>
+        <g class="bubble" transform="translate(132 98)">
+          <circle class="ring" r="28"/>
+          <image href="images/us/san-francisco-thumb.jpg" x="-25" y="-25" width="50" height="50" clip-path="url(#clip)" preserveAspectRatio="xMidYMid slice"/>
+          <text class="label" y="39" text-anchor="middle">San Francisco</text>
+        </g>
+      </g>
         </svg>
       </div>
       <ul class="place-strip">
@@ -307,6 +317,10 @@
         <img src="images/us/mauna-kea-thumb.jpg" alt="" width="56" height="56" loading="lazy">
         <span><strong>Mauna Kea, USA</strong><em>美国 冒纳凯阿火山</em></span>
       </button></li>
+      <li><button type="button" class="chip" data-key="san-francisco">
+        <img src="images/us/san-francisco-thumb.jpg" alt="" width="56" height="56" loading="lazy">
+        <span><strong>San Francisco, USA</strong><em>美国 旧金山</em></span>
+      </button></li>
       </ul>
     </section>
 
@@ -335,7 +349,8 @@
     { key: "honolulu", en: "Honolulu, USA", zh: "美国 檀香山" },
     { key: "antalya", en: "Antalya, Türkiye", zh: "土耳其 安塔利亚" },
     { key: "cairo", en: "Cairo, Egypt", zh: "埃及 开罗" },
-    { key: "mauna-kea", en: "Mauna Kea, USA", zh: "美国 冒纳凯阿火山" }
+    { key: "mauna-kea", en: "Mauna Kea, USA", zh: "美国 冒纳凯阿火山" },
+    { key: "san-francisco", en: "San Francisco, USA", zh: "美国 旧金山" }
         ];
         var box = document.getElementById('lightbox');
         var img = document.getElementById('lb-img');
