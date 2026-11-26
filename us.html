@@ -38,7 +38,7 @@
       <p class="eyebrow">Places we have been together</p>
       <h3>Lit up so far</h3>
       <div class="map-card">
-        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with fourteen places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen, Cambridge, Barcelona, Honolulu, Antalya, Cairo, Mauna Kea and San Francisco. Select a place to see our photo.">
+        <svg class="cartoon-map" viewBox="0 0 1080 426" role="img" aria-label="Cartoon world map with sixteen places lit up: London, Hallstatt, the Matterhorn, Tenerife, Mount Fuji, Orlando, Bergen, Cambridge, Barcelona, Honolulu, Antalya, Cairo, Mauna Kea, San Francisco, Las Vegas and Los Angeles. Select a place to see our photo.">
           <defs>
             <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0" stop-color="#d4ebf0"/>
@@ -262,6 +262,26 @@
           <text class="label" y="39" text-anchor="middle">San Francisco</text>
         </g>
       </g>
+      <g class="pin" style="--i:14" data-key="las-vegas" tabindex="0" role="button" aria-label="Las Vegas, USA — open photo">
+        <circle class="glow" cx="194.5" cy="143.8" r="15" fill="url(#glow)"/>
+        <line class="leader" x1="194.5" y1="143.8" x2="228" y2="92"/>
+        <circle class="dot" cx="194.5" cy="143.8" r="3.4"/>
+        <g class="bubble" transform="translate(228 92)">
+          <circle class="ring" r="28"/>
+          <image href="images/us/las-vegas-thumb.jpg" x="-25" y="-25" width="50" height="50" clip-path="url(#clip)" preserveAspectRatio="xMidYMid slice"/>
+          <text class="label" y="39" text-anchor="middle">Las Vegas</text>
+        </g>
+      </g>
+      <g class="pin" style="--i:15" data-key="los-angeles" tabindex="0" role="button" aria-label="Los Angeles, USA — open photo">
+        <circle class="glow" cx="185.3" cy="149.8" r="15" fill="url(#glow)"/>
+        <line class="leader" x1="185.3" y1="149.8" x2="220" y2="212"/>
+        <circle class="dot" cx="185.3" cy="149.8" r="3.4"/>
+        <g class="bubble" transform="translate(220 212)">
+          <circle class="ring" r="28"/>
+          <image href="images/us/los-angeles-thumb.jpg" x="-25" y="-25" width="50" height="50" clip-path="url(#clip)" preserveAspectRatio="xMidYMid slice"/>
+          <text class="label" y="39" text-anchor="middle">Los Angeles</text>
+        </g>
+      </g>
         </svg>
       </div>
       <ul class="place-strip">
@@ -321,6 +341,14 @@
         <img src="images/us/san-francisco-thumb.jpg" alt="" width="56" height="56" loading="lazy">
         <span><strong>San Francisco, USA</strong><em>美国 旧金山</em></span>
       </button></li>
+      <li><button type="button" class="chip" data-key="las-vegas">
+        <img src="images/us/las-vegas-thumb.jpg" alt="" width="56" height="56" loading="lazy">
+        <span><strong>Las Vegas, USA</strong><em>美国 拉斯维加斯</em></span>
+      </button></li>
+      <li><button type="button" class="chip" data-key="los-angeles">
+        <img src="images/us/los-angeles-thumb.jpg" alt="" width="56" height="56" loading="lazy">
+        <span><strong>Los Angeles, USA</strong><em>美国 洛杉矶</em></span>
+      </button></li>
       </ul>
     </section>
 
@@ -350,7 +378,9 @@
     { key: "antalya", en: "Antalya, Türkiye", zh: "土耳其 安塔利亚" },
     { key: "cairo", en: "Cairo, Egypt", zh: "埃及 开罗" },
     { key: "mauna-kea", en: "Mauna Kea, USA", zh: "美国 冒纳凯阿火山" },
-    { key: "san-francisco", en: "San Francisco, USA", zh: "美国 旧金山" }
+    { key: "san-francisco", en: "San Francisco, USA", zh: "美国 旧金山" },
+    { key: "las-vegas", en: "Las Vegas, USA", zh: "美国 拉斯维加斯" },
+    { key: "los-angeles", en: "Los Angeles, USA", zh: "美国 洛杉矶" }
         ];
         var box = document.getElementById('lightbox');
         var img = document.getElementById('lb-img');
